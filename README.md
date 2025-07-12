@@ -26,3 +26,12 @@ Gemma-3n-E4B-it需要transformers>=4.53.0
 uv pip install transformers
 ```
 有部分LLM所需的依赖未出现在官方示例代码中，建议缺少部分自行安装
+
+## 视频文件
+建议使用FFmpeg提取音频并保存为WAV格式
+```
+ffmpeg -y -i _input_video_file_ -vn -acodec pcm_s16le -ar 44100 -ac 2
+```
+
+## 字幕翻译
+[Galtransl](https://github.com/GalTransl/GalTransl)及[AiNiee](https://github.com/NEKOparapa/AiNiee)均支持使用LLM将srt字幕文件翻译为中文
